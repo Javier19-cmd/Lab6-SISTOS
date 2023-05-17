@@ -1,0 +1,52 @@
+Iniciando thread 140357344253696
+140357344253696 - (!) Recurso tomado
+iando thread 140357335860992
+140357344253696 - (!) Recurso tomado
+140357344253696 - Buenos dias! Recurso usado
+Iniciando thread 140357327468288
+140357327468288 - (!) Recurso tomado
+
+140357327468288 - Recurso no disponible
+iando thread 140357310682880
+
+140357327468288 - Recurso no disponible
+
+140357327468288 - (!) Recurso tomado
+140357327468288 - Recurso no disponible
+140357327468288 - (!) Recurso tomado
+140357327468288 - Recurso no disponible
+140357327468288 - (!) Recurso tomado
+140357327468288 - Recurso no disponible
+140357327468288 - Semaforo muerto
+Terminando thread 140357327468288
+140357310682880 - (!) Recurso tomado
+140357310682880 - Recurso no dispo140357310682880 - Recurso no disponible
+140357310682880 - (!) Recurso tomado
+140357310682880 - Recurso no disponible
+140357310682880 - (!) Recurso tomado
+140357310682880 - Recurso no disponible
+140357310682880 - (!) Recurso tomado
+140357310682880 - Recurso no disponible
+140357310682880 - Semaforo muerto
+Terminando thread 140357310682880
+140357319075584 - (!) Recurso tomado
+140357319075584 - Recurso no disponible
+140357319075584 - (!) Recurso tomado
+140357319075584 - Recurso no disponible
+140357319075584 - (!) Recurso tomado
+140357319075584 - Recurso no disponible
+140357319075584 - (!) Recurso tomado
+140357319075584 - Recurso no disponible
+140357319075584 - Semaforo muerto
+Terminando thread 140357319075584
+140357335860992 - (!) Recurso tomado
+140357335860992 - Recurso no disponible
+140357335860992 - (!) Recurso tomado
+140357335860992 - Recurso no disponible
+140357335860992 - (!) Recurso tomado
+140357335860992 - Recurso no disponible
+140357335860992 - (!) Recurso tomado
+140357335860992 - Recurso no disponible
+140357335860992 - Semaforo muerto
+Terminando thread 140357335860992
+140357344253696 - Recurso devuelto :)

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <thread>
 #include <mutex>
 #include <chrono>
@@ -12,6 +13,15 @@ int iterationCount = 0; // Cantidad de iteraciones que los threads deben hacer
 int waitTimeMin = 1; // Tiempo mínimo de espera
 int waitTimeMax = 5; // Tiempo máximo de espera
 
+ofstream logfile; // Archivo de bitácora
+
+void logMessage(const string& message)
+{
+    resourceMutex.lock();
+    logfile << message << endl;
+    resourceMutex.unlock();
+}
+
 void threadFunction()
 {
     for (int i = 0; i < iterationCount; i++)
@@ -24,7 +34,8 @@ void threadFunction()
         {
             // Utilizar un recurso
             resourceCount--;
-            cout << "Thread " << this_thread::get_id() << " utilizó un recurso. Recursos disponibles: " << resourceCount << endl;
+            logMessage("Thread " + to_string(hash<thread::id>{}(this_thread::get_id())) + " no pudo utilizar un recurso. Recursos disponibles: " + to_string(resourceCount));
+
 
             // Liberar el mutex para permitir que otros threads utilicen el recurso
             resourceMutex.unlock();
@@ -41,12 +52,13 @@ void threadFunction()
 
             // Devolver el recurso utilizado
             resourceCount++;
-            cout << "Thread " << this_thread::get_id() << " devolvió un recurso. Recursos disponibles: " << resourceCount << endl;
+            logMessage("Thread " + to_string(hash<thread::id>{}(this_thread::get_id())) + " devolvió un recurso. Recursos disponibles: " + to_string(resourceCount));
         }
         else
         {
             // No hay recursos disponibles
-            cout << "Thread " << this_thread::get_id() << " no pudo utilizar un recurso. Recursos disponibles: " << resourceCount << endl;
+
+            logMessage("Thread " + to_string(hash<thread::id>{}(this_thread::get_id())) + " no pudo utilizar un recurso. Recursos disponibles: " + to_string(resourceCount));
 
             // Liberar el mutex para permitir que otros threads intenten utilizar el recurso
             resourceMutex.unlock();
@@ -74,18 +86,34 @@ int main()
     cout << "Ingrese el tiempo máximo de espera en segundos: ";
     cin >> waitTimeMax;
 
+    // Abrir el archivo de bitácora
+    logfile.open("bitacora.txt");
+
+    // Escribir el encabezado en la bitácora
+    logMessage("Iniciando programa");
+    logMessage("Cantidad de recursos disponibles: " + to_string(resourceCount));
+    logMessage("Cantidad de iteraciones por thread: " + to_string(iterationCount));
+    logMessage("Tiempo mínimo de espera: " + to_string(waitTimeMin) + " segundos");
+    logMessage("Tiempo máximo de espera: " + to_string(waitTimeMax) + " segundos");
+
     // Crear los threads
-    thread threads[threadCount];
+    vector<thread> threads;
     for (int i = 0; i < threadCount; i++)
     {
-        threads[i] = thread(threadFunction);
+        threads.emplace_back(threadFunction);
     }
 
     // Esperar a que los threads terminen
-    for (int i = 0; i < threadCount; i++)
+    for (auto& thread : threads)
     {
-        threads[i].join();
+        thread.join();
     }
+
+    // Escribir mensaje de finalización en la bitácora
+    logMessage("Programa finalizado");
+
+    // Cerrar el archivo de bitácora
+    logfile.close();
 
     return 0;
 }

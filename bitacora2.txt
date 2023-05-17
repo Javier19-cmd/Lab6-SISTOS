@@ -1,0 +1,61 @@
+Iniciando thread Iniciando thread 140550855710464140550847317760
+
+140550855710464 - (!) Recurso tomado
+140550855710464 - Buenos dias! Recurso usado
+140550855710464 - Buenos dias! Recurso usado
+Iniciando thread 1405140550847317760 - (!) Recurso tomado
+140550847317760 - Recurso no disponible
+140550847317760 - (!) Recurso tomado
+140550847317760 - Recurso no disponible
+140550847317760 - (!) Recurso tomado
+140550847317760 - Recurso no disponible
+140550847317760 - (!) Recurso tomado
+le
+sado
+Iniciando thread 140550822139648
+read 140550838925056
+140550847317760 - (!) Recurso tomado
+140550847317760 - Recurso no disponible
+140550847317760 - Semaforo muerto
+Terminando thread 140550847317760
+140550838925056 - (!) Recurso tomado
+140550838925056 - Recurso no disponible
+140550838925056 - (!) Recurso tomado
+140550838925056 - Recurso no disponible
+140550838925056 - (!) Recurso tomado
+140550838925056 - Recurso no disponible
+140550838925056 - (!) Recurso tomado
+140550838925056 - Recurso no disponible
+sado
+Iniciando thread 140550822139648
+read 140550838925056
+Iniciando thread 140550830532352
+140550838925056 - Recurso no disponible
+140550838925056 - Semaforo muerto
+Terminando thread 140550838925056
+do
+Terminando thread 140550838925056
+140550830532352 - Recurso no disponible
+140550830532352 - (!) Recurso tomado
+le
+sado
+Iniciando thread 140550822139648
+140550830532352 - (!) Recurso tomado
+140550830532352 - Recurso no disponible
+140550830532352 - (!) Recurso tomado
+140550830532352 - Recurso no disponible
+140550830532352 - (!) Recurso tomado
+140550830532352 - Recurso no disponible
+140550830532352 - Semaforo muerto
+Terminando thread 140550830532352
+140550822139648 - (!) Recurso tomado
+140550822139648 - Recurso no disponible
+140550822139648 - (!) Recurso tomado
+140550822139648 - Recurso no disponible
+140550822139648 - (!) Recurso tomado
+140550822139648 - Recurso no disponible
+140550822139648 - (!) Recurso tomado
+140550822139648 - Recurso no disponible
+140550822139648 - Semaforo muerto
+Terminando thread 140550822139648
+140550855710464 - Recurso devuelto :)
